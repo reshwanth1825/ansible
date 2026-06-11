@@ -1,0 +1,23 @@
+- name: Reshwanth
+  email: reshwanth1825@gmail.com
+  addresses: 
+  - type: perm
+    doornum: 123
+    street: "street num- 8"
+    city: Hyderbad
+  - type: current 
+    doornum: 123
+    street: "street num- 8"
+    city: Hyderbad
+
+- name: harini
+  email: harini@gmail.com
+  addresses: 
+  - type: perm
+    doornum: 123
+    street: "street num- 8"
+    city: Hyderbad
+  - type: current 
+    doornum: 123
+    street: "street num- 8"
+    city: Hyderbad
