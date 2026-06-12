@@ -11,3 +11,7 @@
         NAME: HARINI
       ansible.builtin.debug:
         msg: "This is {{NAME}}, I am learning {{COURSE}}, I will complete and get a job {{WHEN}}"
+
+    - name: To print the variable names
+      ansible.builtin.debug:
+        msg: "This is {{NAME}}, I am learning {{COURSE}}, I will complete and get a job {{WHEN}}"
