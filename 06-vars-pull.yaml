@@ -6,4 +6,4 @@
   tasks:
     - name: I pulled the variables from course.yaml
       ansible.builtin.debug:
-      msg: "This is {{NAME}}, and I am learning {{COURSE}}} and soon I will get {{PURPOSE}}"
+        msg: "This is {{NAME}}, and I am learning {{COURSE}} and soon I will get {{PURPOSE}}"
