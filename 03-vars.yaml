@@ -1,0 +1,7 @@
+- name: To understand the variables
+  hosts: local
+  connection: local
+  tasks:
+    - name: To print the variable value
+      ansible.built.debug:
+        msg: "This is reshwanth"
