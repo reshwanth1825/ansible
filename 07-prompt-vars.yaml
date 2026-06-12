@@ -1,0 +1,17 @@
+- name: To understand how prompt works
+  hosts: local
+  connection: local
+  vars_prompt:
+    - name: NAME
+      prompt: "Enter your last name"
+      private: false
+    - name: COURSE
+      prompt: "Enter your course name"
+      private: false
+    - name: PURPOSE
+      prompt: "Enter your purpose"
+      private: false
+  tasks:
+    - name: Prompts
+      ansible.builtin.debug:
+        msg: "Your name is {{NAME}}, and your course is {{COURSE}}, and your {{PURPOSE}}"
