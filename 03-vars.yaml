@@ -3,5 +3,5 @@
   connection: local
   tasks:
     - name: To print the variable value
-      ansible.built.debug:
+      ansible.builtin.debug:
         msg: "This is reshwanth"
