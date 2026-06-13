@@ -2,14 +2,20 @@
   hosts: web
   become: yes
   tasks:
-  - name: Checking whether OS is Redhat
-    ansible.builtin.dnf:
-      name: nginx
-      state: installed
-    when: ansible_os_family == "RedHat"
+    - name: Checking whether OS is Redhat
+      ansible.builtin.dnf:
+        name: nginx
+        state: installed
+      ansible.builtin.service:
+        name: nginx
+        state: started
+      when: ansible_os_family == "RedHat"
 
-  - name: Checking whether OS is Ubuntu
-    ansible.builtin.apt:
-      name: nginx
-      state: installed
-    when: ansible_os_family == "Debian"
+    - name: Checking whether OS is Ubuntu
+      ansible.builtin.apt:
+        name: nginx
+        state: installed
+      ansible.builtin.service:
+        name: nginx
+        state: started
+      when: ansible_os_family == "Debian"
