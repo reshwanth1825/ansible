@@ -11,7 +11,7 @@
       - Ansible
       - AWS
     live: true #boolean
-  tools:
+    tools:
     ci: jenkins
     cloud: aws
     containerization: docker
