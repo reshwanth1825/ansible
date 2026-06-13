@@ -1,0 +1,21 @@
+- name: To understand the data types
+  hosts: local
+  connection: local
+  vars:
+    Course: "AWS with Devops" #string
+    Trainer: "Shiva Kumar Reddy" #string
+    Duration: 120 #number
+    topics: #list
+      - linux
+      - shell
+      - Ansible
+      - AWS
+    live: true #boolean
+  tools:
+    ci: jenkins
+    cloud: aws
+    containerization: docker
+  tasks:
+    - name: print the course information
+      ansible.builtin.debug:
+      msg: "Hello I am learning {{ Course }}, with trainer {{ Trainer }}, and Duration is {{Duration}}, Topics are {{topics}} with tools {{tools}}, is it live {{live}}"

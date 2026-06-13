@@ -1,6 +1,6 @@
 - name: To understand the variables
   hosts: local
-  connection: local
+  connection: local # To tell Ansible work on local server without SSH and password
   tasks:
     - name: To print the variable value
       ansible.builtin.debug:
