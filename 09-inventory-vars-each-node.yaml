@@ -1,0 +1,7 @@
+- name: To write variables in inventory
+  hosts: web
+  connection: local
+  tasks:
+    - name: Reading variables from inventory
+      ansible.builtin.debug:
+        msg: "I am practicing {{Course}} for {{Trainer}}, and duration is {{Duration}}"
