@@ -1,6 +1,6 @@
 - name: To get the facts about the node server
   hosts: web
-  tasks: 
-  - name: I am printing the facts about node server
-    ansible.buitin:debug: 
-      msg: "{{ansible_facts}}"
+  tasks:
+    - name: I am printing the facts about node server
+      ansible.buitin.debug:
+        msg: "{{ansible_facts}}"
