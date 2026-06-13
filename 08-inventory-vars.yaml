@@ -1,6 +1,6 @@
 - name: To write variables in inventory
   hosts: local
-  connections: local
+  connection: local
   tasks:
     - name: Reading variables from inventory
       ansible.builtin.debug:
