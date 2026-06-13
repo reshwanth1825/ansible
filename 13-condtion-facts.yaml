@@ -6,6 +6,9 @@
       ansible.builtin.dnf:
         name: nginx
         state: installed
+      when: ansible_os_family == "RedHat"
+
+    - name: start service
       ansible.builtin.service:
         name: nginx
         state: started
@@ -15,6 +18,8 @@
       ansible.builtin.apt:
         name: nginx
         state: installed
+
+    - name: start service
       ansible.builtin.service:
         name: nginx
         state: started
