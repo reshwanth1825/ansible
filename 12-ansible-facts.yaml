@@ -2,5 +2,5 @@
   hosts: web
   tasks:
     - name: I am printing the facts about node server
-      ansible.buitin.debug:
+      ansible.builtin.debug:
         msg: "{{ansible_facts}}"
