@@ -4,13 +4,13 @@
   vars_prompt:
     - name: NAME
       prompt: "Enter your last name"
-      private: false
+      private: true
     - name: COURSE
       prompt: "Enter your course name"
-      private: false
+      private: true
     - name: PURPOSE
       prompt: "Enter your purpose"
-      private: false
+      private: true
   tasks:
     - name: Prompts
       ansible.builtin.debug:
