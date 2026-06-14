@@ -1,6 +1,7 @@
 - name: To install all packages
   hosts: local
   connection: local
+  become: yes
   tasks:
     - name: Installing the packages
       ansible.builtin.package:
@@ -10,3 +11,12 @@
         - { name: "git", state: "present" }
         - { name: "nginx", state: "present" }
         - { name: "gcc", state: "present" }
+        
+    - name: Ensure Nginx service is started and enabled
+      ansible.builtin.service:
+        name: "{{item.name}}"
+        state: "{{item.state}}"
+        enabled: "{{item.enabled}}"
+        loop:
+        - {name: "nginx", state: "started", enabled: "yes"}
+
