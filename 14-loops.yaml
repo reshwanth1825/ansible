@@ -3,8 +3,8 @@
   tasks:
     - name: to understand loops
       ansible.builtin.debug:
-        msg: "Printing{ { item } }"
+        msg: "Hello {{ item }}"
       loop:
-        - "Reshwanth"
-        - "harini"
-        - "Suresh"
+        - Reshwanth
+        - harini
+        - Suresh
