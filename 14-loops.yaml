@@ -1,0 +1,10 @@
+- name: loops
+  hosts: local
+  tasks:
+    - name: to understand loops
+      ansible.builtin.debug:
+        msg: "Printing{ { item } }"
+      loop:
+        - "Reshwanth"
+        - "harini"
+        - "Suresh"
